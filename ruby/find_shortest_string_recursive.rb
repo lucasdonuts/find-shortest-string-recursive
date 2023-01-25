@@ -1,5 +1,8 @@
 def find_shortest_string_recursive(arr)
-  # type your code in here
+  return arr[0] if arr.length == 1
+
+  shortest = find_shortest_string_recursive(arr[1..-1])
+  return arr[0] <= shortest ? arr[0] : shortest
 end
 
 if __FILE__ == $PROGRAM_NAME
